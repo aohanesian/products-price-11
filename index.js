@@ -3,7 +3,7 @@ const products = [
     ['banana', 8],
     ['mango', 20],
     ['grape', 18]
-]
+];
 
 function summerValue(value) {
     return value * 0.8;
@@ -17,9 +17,9 @@ function getPrice(products, seasonFunc) {
     const copiedProducts = JSON.parse(JSON.stringify(products));
     let result = 0;
     for (let i = 0; i < copiedProducts.length; i++) {
-        if (seasonFunc)
+        if (seasonFunc) {
             result += seasonFunc(copiedProducts[i][1]);
-        else {
+        } else {
             result += copiedProducts[i][1];
         }
     }
